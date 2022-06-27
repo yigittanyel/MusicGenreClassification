@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<title>Müzik Türü Tespiti</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Müzik Türü Sınıflandırma">
+	<meta name="keywords" content="music, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--  jquery cdn -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<!-- Google font -->
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap" rel="stylesheet">
+ 
+	<!-- Stylesheets -->
+
+	<link rel="stylesheet" href="../static/styles/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="../static/styles/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="../static/styles/owl.carousel.min.css">
+	<link rel="stylesheet" href="../static/styles/slicknav.min.css">
+
+
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="../static/styles/style.css">
+
+
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section clearfix">
+		<a href="{{ url_for('musicGenre') }}" class="site-logo" style="color:white; font-size: 1em;">
+			<span> | </span>MÜZİK TÜRÜ TESPİTİ<span> | </span>
+		</a>
+		<div class="header-right user-panel">
+			
+			<span>|</span>
+			<a href="{{ url_for('musicGenre') }}" class="hr-btn" style="color:white;">Hemen Tespit Et</a> <!--url_for'da fonksiyon adı kullanılıyor.-->
+			<span>|</span>
+
+		</div>
+	</header>
+	<!-- Header section end -->
+
+	<!-- Hero section -->
+	<section class="hero-section">
+		<div class="hero-slider owl-carousel">
+			<div class="hs-item">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="hs-text">
+								<h2 class="text-center"><span>Müzik</span> Türü Bul</h2>
+								<p> Seçilen dosyanın hangi müzik türüne ait olduğunu öğrenmek için hemen tıklayın. </p>
+								<a href="{{ url_for('musicGenre') }}" class="site-btn" style="margin-left:125px;">Tespit Et</a>
+
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="hr-img">
+								<img src ="../static/images/hero-bg.png" >
+								<!-- PATH: C:\Users\MSI\Desktop\projetoFlask\projetoFlask\static\images\hero-bg.png -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hs-item">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="hs-text">
+								<h2 class="text-center"><span> Biz</span> Kimiz? </h2>
+								<p>
+									Bizler Uludağ Üniversitesi Bilgisayar Mühendisliği son sınıf öğrencileri Yiğit Tanyel ve Ahmet Yasin Aydın.
+								</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="hr-img">
+								<img src ="../static/images/hero-bg.png" >
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<div class="hs-item">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="hs-text">
+								<h2 class="text-center"><span> Konumuz</span> Nedir? </h2><br>
+								<p style="text-align:center;">
+									Derin Öğrenme Tabanlı Müzik Türü Sınıflandırma
+								</p> <br>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="hr-img">
+								<img src ="../static/images/hero-bg.png" >
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+
+	<!-- Intro section -->
+	<section class="intro-section spad">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="section-title">
+						<h2 class="text-center">PROJENİN GELİŞİM PLANI : </h2>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<!-- <p> K en yakın komşu algoritması ve CNN algoritmasının birbirlerine üstünlükleri incelendi ve hangisinin kullanılacağı 
+						konusunda karar kılındı. Genel süreç ele alındığında daha önce iki ekip üyesinin de çalışmadığı bir alan olan derin ö
+						ğrenmeyle sınıflandırma konusunda epey bilgi edindiğimizi düşünüyoruz. 
+						Derin öğrenme algoritmalarının aşamalarını, veri ön işleme vb. gibi teknik konularda zamansal ve maliyetsel olarak 
+						birbirlerine üstünlüklerini inceleyerek algoritmalar hakkında bilgi edinildi. 
+						Projede son olarak derin öğrenme algoritması ile pythonun flask framewokü bir araya getirilerek bir web arayüzü
+						oluşturuldu ve buna ilaveten bir tanıtım sayfası bir de tespit etme sayfası olmak üzere iki sayfa oluşturulup frontendi 
+						yazıldı.</p> -->
+						<p>Literatür araştırması ile konuyla ilgili önceki çalışmalar incelenecek.Sonrasında kullanılacak GTZAN dataset adı verilen müzik türü sınıflandırma
+							verileri incelenecek ve projeye uygun olabilecek veri seti projeye import edilecek.Kullanılabilecek olan derin öğrenme modelleri incelenerek projeye uygun olan model 
+							entegre edilecek. İlgili model geliştirilerek girilen müziğin türünü tespit edebilen bir sistem elde edilecek.
+						</p>
+				</div>
+				<div class="col-lg-6">
+					<div class="section-title">
+						<h2 class="text-center">PROJENİN SOMUT BAŞARI KRİTERLERİ  : </h2>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<p> 
+						Projede derin öğrenme yöntemleri incelenerek projeye en uygun model projeye eklenecek. İlgili problem tanımını anlamada ve gerçekleştirme kısmında her iki ekip 
+						üyesinin de özverili çalışması sonucu yeterli olması beklenmektedir. Projenin yenilikçi yönü olarak ilgili veri setine bazı yerli ve yabancı .wav uzantılı şarkılar
+						da eklenerek karışık bir veri seti üzerinde derin öğrenme metodunu çalıştırarak bu şekilde de doğru tahmin etmesini sağlayabilmeyi gerçekleştirmek hedef alınıyor.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Intro section end -->
+
+	<!-- How section -->
+	<section class="how-section spad set-bg">
+		<div class="container text-white">
+			<div class="section-title">
+				<h2>Projede Neler Yaptık?</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="how-item">
+						<div class="hi-icon">
+							<img src ="../static/images/icons/brain.png" >
+						</div>
+						<h4>Seçilen Derin Öğrenme Algoritması</h4>
+						<p>Derin öğrenme metodu için k-en yakın komşuluk algoritması ve cnn algoritması incelendi ve bunlardan k-en yakın komşuluk algoritması tercih edildi. Bunun sebebi bu algoritmanın daha önce bu tarz uygulamalarda uygulandığında efektif sonuç vermesi oldu. Regresyon ve sınıflandırma için elverişli bir algoritma olan bu algoritma benzerlik ölçülerine yani aradaki mesafeye dayalı tahminler yapma temeline dayalı çalışan bir algoritmadır. </p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="how-item">
+						<div class="hi-icon">
+							<img src ="../static/images/icons/pointer.png" >
+						</div>
+						<h4>Projenin Frontend Kısmı</h4>
+						<p>Projede frontend olarak temel html,css ve javascriptin yanı sıra bootstrap ve jquery kütüphaneleri de kullanıldı. </p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="how-item">
+						<div class="hi-icon">
+							<img src ="../static/images/icons/smartphone.png" >
+						</div>
+						<h4>Web Arayüzü İçin Neden Flask?</h4>
+						<ul>
+							<li>Son derece esnek</li>
+							<li>Öğrenilmesi ve kullanması kolay</li>
+							<li>Yönlendirme URL’leri kolay</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- How section end -->
+
+	<!-- Concept section -->
+	<section class="concept-section spad">
+		<div class="container" id="imgBoyut">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="section-title">
+						<h2>Veri Tabanımız</h2>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<p>
+						Bu çalışmamızda GTZAN adı verilen müzik türlü sınıflandırma veri setlerinden biri kullanılmış, buna ilaveten projedeki ana çalışma motivasyonumuz olan hem batı kaynaklı eserlerden hem de Türkçe kaynaklardan karışık bir veri seti üzerinde sınıflandırma yapmak amacıyla Türkçe müzikal eserler de dahil edilmiştir. Blues,   Classical, Country, Disco, Hiphop, Jazz, Metal, Pop , Reggae, Rock olmak üzere toplamda 10 tür üzerinde çalışılmıştır.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/blues.png" >
+						<h5>Blues</h5>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/classical.jpg" >
+						<h5>Classical</h5>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/country.jpg" >
+						<h5>Country</h5>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/disco.jpg" >
+						<h5>Disco</h5>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/rap.png" >
+						<h5>Hiphop</h5>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/jazz.jpg" >
+						<h5>Jazz</h5>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/metal.jpg" >
+						<h5>Metal</h5>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/pop.jpg" >
+						<h5>Pop</h5>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/reggae.png" >
+						<h5>Reggae</h5>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="concept-item">
+						<img src ="../static/images/rock.jpg" >
+						<h5>Rock</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Concept section end -->
+
+
+
+
+	<!-- Footer section -->
+	<footer class="footer-section">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xl-12 col-lg-12 order-lg-1 text-center">
+					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Tüm hakları gizlidir.</div>
+					<div class="social-links">
+						<p>BURSA | TÜRKİYE</p>>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer section end -->
+	
+
+	<style>
+		#imgBoyut img{
+			width: 210px;
+			height: 210px;
+		}
+	</style>
+
+	<!--====== Javascripts & Jquery ======-->
+
+	<script src ="../static/js/bootstrap.min.js"></script>
+	<script src ="../static/js/jquery.slicknav.min.js"></script>
+	<script src ="../static/js/owl.carousel.min.js"></script>
+	<script src ="../static/js/mixitup.min.js"></script>
+	<script src ="../static/js/main.js"></script>
+
+	</body>
+</html>
